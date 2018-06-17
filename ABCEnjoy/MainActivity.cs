@@ -26,6 +26,7 @@ namespace ABCEnjoy
         int taaj;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            int count = 1;
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
