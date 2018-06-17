@@ -9,6 +9,7 @@ namespace ABCEnjoy
     {
         int count = 1;
         int b = 0;
+        int c = 0;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
