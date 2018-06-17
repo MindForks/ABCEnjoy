@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -21,19 +20,51 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-          <xamarin.rangeslider.RangeSliderControl
-        android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        local:absoluteMinValue="10"
-        local:absoluteMaxValue="20"
-        local:showRangeLabels="false"
-        local:barHeight="1dp"
-    />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price" />
+                <xamarin.rangeslider.RangeSliderControl
+                    android:id="@+id/sliderPrice"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:absoluteMinValue="0"
+                    app:absoluteMaxValue="1000"
+                    app:showRangeLabels="false"
+                    app:barHeight="4dp" />
+            </LinearLayout>
+          <LinearLayout
+                         android:orientation="horizontal"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"/>
+                 <Button
+                      android:id="@+id/timebefore"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="TIME BEFORE" />
+                <Button
+                      android:id="@+id/timeafter"
+                      android:paddingLeft="20dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="TIME AFTER" />
+          </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Support V7 Action Bar Drawer Toggle"
+                android:text="Main Activity"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
     <!-- The Left Navigation Drawer -->
@@ -44,7 +75,7 @@
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
             android:divider="#818181"
-            android:dividerHeight="2dp"
+            android:dividerHeight="1dp"
             android:background="#E3F2FD" />
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>
