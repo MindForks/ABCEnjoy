@@ -2320,9 +2320,6 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07007f
 			public const int time = 2131165311;
 			
-			// aapt resource value: 0x7f070077
-			public const int timeafter = 2131165303;
-			
 			// aapt resource value: 0x7f070076
 			public const int timebefore = 2131165302;
 			
@@ -2331,6 +2328,9 @@ namespace ABCEnjoy
 			
 			// aapt resource value: 0x7f070048
 			public const int title_template = 2131165256;
+			
+			// aapt resource value: 0x7f070077
+			public const int toView = 2131165303;
 			
 			// aapt resource value: 0x7f070073
 			public const int toolbar = 2131165299;

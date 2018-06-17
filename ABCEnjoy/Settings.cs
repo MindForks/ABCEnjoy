@@ -3,6 +3,6 @@ namespace ABCEnjoy
 {
     public class Settings
     {
-        public static string dbPath = SQLite_Android.GetDatabasePath("ItemsOfCategory.db");
+        public static string dbPath = SQLite_Android.GetDatabasePath("Items.db");
     }
 }

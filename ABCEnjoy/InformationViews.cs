@@ -26,6 +26,10 @@ namespace ABCEnjoy
 
         public void CreateElements()
         {
+
+            var res = SQLite_Android.GetDBItems("select * from Itm");
+
+
             ScrollView sw = FindViewById<ScrollView>(Resource.Id.scrollView);
             LinearLayout ll = FindViewById<LinearLayout>(Resource.Id.linearLayout);
             for (int index = 0; index < number_of_elements; index++)

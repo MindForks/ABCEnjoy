@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -17,10 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <!-- The Main Content View -->
-      <LinearLayout
-        android:orientation="vertical"
-        android:weightSum="1"
-          android:layout_width="match_parent"
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
                 android:orientation="vertical"
@@ -30,15 +30,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/price" />
-              <xamarin.rangeslider.RangeSliderControl
-                  android:id="@+id/sliderPrice"
-                  android:gravity="center"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  app:absoluteMinValue="0"
-                  app:absoluteMaxValue="1000"
-                  app:showRangeLabels="false"
-                  app:barHeight="4dp"/>
+                <xamarin.rangeslider.RangeSliderControl
+                    android:id="@+id/sliderPrice"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:absoluteMinValue="0"
+                    app:absoluteMaxValue="1000"
+                    app:showRangeLabels="false"
+                    app:barHeight="4dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -55,14 +55,18 @@
                     android:gravity="center"
                     android:text="TIME BEFORE" />
                 <Button
-                    android:id="@+id/timeafter"
+                    android:id="@+id/toView"
                     android:paddingLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TIME AFTER" />
+                    android:text="GO to View" />
             </LinearLayout>
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     <!-- The Left Navigation Drawer -->
         <ListView
             android:id="@+id/left_drawer"

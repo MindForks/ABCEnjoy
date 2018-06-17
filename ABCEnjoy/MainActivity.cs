@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using Android.Views;
 using Xamarin.RangeSlider;
 using System;
+using Android.Content;
 
 namespace ABCEnjoy
 {
@@ -21,6 +22,7 @@ namespace ABCEnjoy
 
         private RangeSliderControl _sliderPrice;
         private Button timeButton_before, timeButton_after;
+        private Button gotoview;
         private SupportToolbar mToolbar;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
@@ -81,10 +83,17 @@ namespace ABCEnjoy
                   });
                   frag.Show(FragmentManager, DatePickerFragment.TAG);
               };
+
+            gotoview.Click+=delegate {
+                var intent = new Intent(this, typeof(InformationViews));
+                StartActivity(intent);
+            };
+
         }
 
         private void FindViewById()
         {
+            gotoview=FindViewById<Button>(Resource.Id.toView);
             timeButton_before = FindViewById<Button>(Resource.Id.timebefore);
             timeButton_after = FindViewById<Button>(Resource.Id.timeafter);
             _sliderPrice = FindViewById<RangeSliderControl>(Resource.Id.sliderPrice);
