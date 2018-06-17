@@ -12,6 +12,7 @@ namespace ABCEnjoy
         int c = 0;
         int Eugene = 0;
         int Sasha=5;
+        int gfg;
         
 
         protected override void OnCreate(Bundle savedInstanceState)
