@@ -29,6 +29,7 @@ namespace ABCEnjoy
 
             var res = SQLite_Android.GetDBItems("select * from Itm");
 
+            string s = ""
 
             ScrollView sw = FindViewById<ScrollView>(Resource.Id.scrollView);
             LinearLayout ll = FindViewById<LinearLayout>(Resource.Id.linearLayout);
