@@ -8,11 +8,6 @@ namespace ABCEnjoy
     public class MainActivity : Activity
     {
         int count = 1;
-<<<<<<< HEAD
-=======
-        int b = 0;
-        int c = 0;
->>>>>>> 6620e0593da1cc98125a15557a465a62e3a6260a
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
