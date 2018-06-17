@@ -10,7 +10,7 @@ namespace ABCEnjoy
     {
         public EmptyClass()
         {
-            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+            //Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
 
         }
     }
