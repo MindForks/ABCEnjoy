@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="TIME BEFORE" />
-              <Button
+                <Button
                     android:id="@+id/timeafter"
                     android:paddingLeft="20dp"
                     android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                     android:gravity="center"
                     android:text="TIME AFTER" />
             </LinearLayout>
-              <LinearLayout
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -73,6 +73,15 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="GO to View" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <WebView
+                    android:id="@+id/myimage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout

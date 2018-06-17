@@ -9,6 +9,7 @@ using Android.Views;
 using Xamarin.RangeSlider;
 using System;
 using Android.Content;
+using Android.Webkit;
 
 namespace ABCEnjoy
 {
@@ -28,7 +29,8 @@ namespace ABCEnjoy
         private ListView mLeftDrawer;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
-        public Button[] button_menu;
+
+        private WebView imbttn;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -39,14 +41,12 @@ namespace ABCEnjoy
             // Get our button from the layout resource,
             // and attach an event to it
             SetSupportActionBar(mToolbar);
-            Button b1m;
-            b1m = new Button(this);
             mLeftDataSet = new List<string>();
             
             mLeftDataSet.Add("Item 1");
             mLeftDataSet.Add("Item 2");
             mLeftAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mLeftDataSet);
-            mLeftDrawer.Adapter = mLeftAdapter;          
+            mLeftDrawer.Adapter = mLeftAdapter;         
 
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);
@@ -58,11 +58,13 @@ namespace ABCEnjoy
             _sliderPrice.LowerValueChanged += (s, e) =>
               {
                   minMoney = (int)_sliderPrice.GetSelectedMinValue();
+                  Toast.MakeText(this, "Минимальная цена: "+minMoney.ToString()+"грн", ToastLength.Short).Show();
               };
 
             _sliderPrice.UpperValueChanged += (s, e) =>
              {
                  maxMoney = (int)_sliderPrice.GetSelectedMaxValue();
+                 Toast.MakeText(this, "Максимальная цена: " +maxMoney.ToString()+"грн", ToastLength.Short).Show();
              };
 
             timeButton_before.Click += (s, e) =>
@@ -88,7 +90,6 @@ namespace ABCEnjoy
                 var intent = new Intent(this, typeof(InformationViews));
                 StartActivity(intent);
             };
-
         }
 
         private void FindViewById()
@@ -112,8 +113,6 @@ namespace ABCEnjoy
         {
             switch (item.ItemId)
             {
-               
-
                 case Android.Resource.Id.Home:
                     this.OnBackPressed();
                     return true;
