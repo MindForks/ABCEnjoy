@@ -16,15 +16,18 @@ namespace ABCEnjoy
     {
         public DateTime DateBefore { get; set; }
         public DateTime DateAfter { get; set; }
+        public int minMoney { get; set; }
+        public int maxMoney { get; set; }
 
         private RangeSliderControl _sliderPrice;
         private Button timeButton_before, timeButton_after;
         private SupportToolbar mToolbar;
-        //private MyActionBarDrawerToggle mDrawerToggle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
+        public Button[] button_menu;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,13 +37,14 @@ namespace ABCEnjoy
             // Get our button from the layout resource,
             // and attach an event to it
             SetSupportActionBar(mToolbar);
-            
-
+            Button b1m;
+            b1m = new Button(this);
             mLeftDataSet = new List<string>();
+            
             mLeftDataSet.Add("Item 1");
             mLeftDataSet.Add("Item 2");
             mLeftAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mLeftDataSet);
-            mLeftDrawer.Adapter = mLeftAdapter;
+            mLeftDrawer.Adapter = mLeftAdapter;          
 
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);
@@ -48,6 +52,16 @@ namespace ABCEnjoy
             var slider = FindViewById<Xamarin.RangeSlider.RangeSliderControl>(Resource.Id.sliderPrice);
             _sliderPrice.SetSelectedMinValue(50);
             _sliderPrice.SetSelectedMaxValue(200);
+
+            _sliderPrice.LowerValueChanged += (s, e) =>
+              {
+                  minMoney = (int)_sliderPrice.GetSelectedMinValue();
+              };
+
+            _sliderPrice.UpperValueChanged += (s, e) =>
+             {
+                 maxMoney = (int)_sliderPrice.GetSelectedMaxValue();
+             };
 
             timeButton_before.Click += (s, e) =>
               {
@@ -89,13 +103,13 @@ namespace ABCEnjoy
         {
             switch (item.ItemId)
             {
+               
+
                 case Android.Resource.Id.Home:
-                    //The hamburger icon was clicked which means the drawer toggle will handle the event
-                    //all we need to do is ensure the right drawer is closed so the don't overlap
+                    this.OnBackPressed();
                     return true;
 
                 case Resource.Id.action_menu:
-                    //Refresh
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);

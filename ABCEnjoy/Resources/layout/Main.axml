@@ -17,56 +17,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <!-- The Main Content View -->
-        <RelativeLayout
-            android:layout_width="match_parent"
+      <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="1"
+          android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center">
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/price" />
-                <xamarin.rangeslider.RangeSliderControl
-                    android:id="@+id/sliderPrice"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:absoluteMinValue="0"
-                    app:absoluteMaxValue="1000"
-                    app:showRangeLabels="false"
-                    app:barHeight="4dp" />
+              <xamarin.rangeslider.RangeSliderControl
+                  android:id="@+id/sliderPrice"
+                  android:gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:absoluteMinValue="0"
+                  app:absoluteMaxValue="1000"
+                  app:showRangeLabels="false"
+                  app:barHeight="4dp"/>
             </LinearLayout>
-          <LinearLayout
-                         android:orientation="horizontal"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content">
-            <TextView
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/date"/>
-                 <Button
-                      android:id="@+id/timebefore"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:gravity="center"
-                      android:text="TIME BEFORE" />
+                    android:text="@string/date" />
                 <Button
-                      android:id="@+id/timeafter"
-                      android:paddingLeft="20dp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:gravity="center"
-                      android:text="TIME AFTER" />
-          </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Main Activity"
-                android:layout_centerInParent="true" />
-        </RelativeLayout>
+                    android:id="@+id/timebefore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="TIME BEFORE" />
+                <Button
+                    android:id="@+id/timeafter"
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="TIME AFTER" />
+            </LinearLayout>
+        </LinearLayout>
     <!-- The Left Navigation Drawer -->
         <ListView
             android:id="@+id/left_drawer"
