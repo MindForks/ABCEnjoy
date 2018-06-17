@@ -54,6 +54,13 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="TIME BEFORE" />
+              <Button
+                    android:id="@+id/timeafter"
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="GO to View" />
                 <Button
                     android:id="@+id/toView"
                     android:paddingLeft="20dp"
