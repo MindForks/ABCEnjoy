@@ -29,8 +29,7 @@ namespace ABCEnjoy
         private ListView mLeftDrawer;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
-
-        private WebView imbttn;
+        public int Eugene;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
