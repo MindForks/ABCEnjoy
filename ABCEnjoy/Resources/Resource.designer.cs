@@ -26,7 +26,6 @@ namespace ABCEnjoy
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ABCEnjoy.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
