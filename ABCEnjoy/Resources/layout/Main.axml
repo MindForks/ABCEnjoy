@@ -60,7 +60,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="GO to View" />
+                    android:text="TIME AFTER" />
+            </LinearLayout>
+              <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <Button
                     android:id="@+id/toView"
                     android:paddingLeft="20dp"
