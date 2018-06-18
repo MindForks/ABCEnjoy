@@ -103,15 +103,19 @@ namespace ABCEnjoy
             Toast.MakeText(this, res.Count.ToString(), ToastLength.Long).Show();
             for (int index = 0; index < number_of_elements; index++)
             {
-                if (Convert.ToInt32(res[index].Price)>=minMoney && Convert.ToInt32(res[index].Price)<=maxMoney) {
                     Android.Net.Uri uri = Android.Net.Uri.Parse($"{res[index].Image}");
                     //var imageBitmap = GetImageBitmapFromUrl($"{res[index].Image}");
                     ve.imgbttn[index] = new ImageButton(this);
                     //ve.imgbttn[index].SetImageBitmap(uri);
 
+                    LinearLayout weblin = new LinearLayout(this);
+                    LinearLayout.LayoutParams lp1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, 500);
+                    weblin.LayoutParameters = lp1;
                     CardView cardview = new CardView(this);
                     ve.cardimage = new WebView(this);
                     ve.cardimage.LoadUrl(uri.ToString());
+                    weblin.AddView(ve.cardimage);
+                    
                     //ve.cardimage
                     ve.title = new TextView(this);
                     ve.title.Text = res[index].Title;
@@ -136,7 +140,7 @@ namespace ABCEnjoy
 
                     llnner.Orientation = Orientation.Vertical;
                     llnner.WeightSum = 1;
-                    llnner.AddView(ve.imgbttn[index]);
+                    llnner.AddView(weblin);
                     llnner.AddView(ve.title);
                     llnner.AddView(ve.local);
                     llnner.AddView(ve.price);
@@ -159,7 +163,6 @@ namespace ABCEnjoy
                     TextView someDescr = new TextView(this);
                     someDescr.Text = "some Description";
                     llInner.AddView(someDescr);*/
-                }
 
             }
                 //sw.AddView(ll);
