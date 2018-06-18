@@ -16,6 +16,7 @@ using System.Net;
 using Android.Support.V7.App;
 using Android.Support.V4.Widget;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Graphics.Drawables;
 
 namespace ABCEnjoy
 {
@@ -151,8 +152,10 @@ namespace ABCEnjoy
                     llnner.AddView(ve.title);
                     llnner.AddView(ve.local);
                     llnner.AddView(ve.price);
-                    //llnner.AddView(cardview);
-                    ll.AddView(llnner);
+
+                llnner.SetBackgroundResource(Resource.Drawable.abc_btn_default_mtrl_shape);
+
+                ll.AddView(llnner);
 
                     /*LinearLayout llInner = new LinearLayout(this);
                     LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FillParent, LinearLayout.LayoutParams.WrapContent);
@@ -175,6 +178,29 @@ namespace ABCEnjoy
                 //sw.AddView(ll);
             //ll.AddView(cardview);
 
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.action_menu_views, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    //this.OnBackPressed();
+                    return true;
+                case Resource.Id.action_search:
+                    return true;
+                case Resource.Id.action_sort:
+                    return true;
+                case Resource.Id.action_filter:
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }

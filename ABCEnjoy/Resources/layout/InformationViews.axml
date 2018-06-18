@@ -23,30 +23,6 @@
             android:weightSum="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
-        <ImageButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/Sort"
-            android:id="@+id/imgSort" />
-        <ImageButton
-                 android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/Filter"
-            android:id="@+id/imgFilter" />
-        <ImageButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/Search"
-            android:layout_gravity="right"
-            android:id="@+id/imgSearch" />
-    </LinearLayout>
     <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"

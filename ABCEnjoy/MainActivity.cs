@@ -95,6 +95,7 @@ namespace ABCEnjoy
                     delegate (DateTime time)
                 {
                     Time_b = time;
+                    time_before.Text = Time_b.ToShortTimeString();
                     //Toast.MakeText(this, $"{Time_b.Hour}", ToastLength.Long).Show();
                 });
 
@@ -107,6 +108,7 @@ namespace ABCEnjoy
                   delegate (DateTime time)
                   {
                       Time_a = time;
+                      time_after.Text = Time_a.ToShortTimeString();
                       //Toast.MakeText(this, $"{Time_a.Hour}", ToastLength.Long).Show();
                   });
 
@@ -168,10 +170,10 @@ namespace ABCEnjoy
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    this.OnBackPressed();
+                    //this.OnBackPressed();
                     return true;
 
-                case Resource.Id.action_menu:
+                case Resource.Id.action_sett:
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);

@@ -3,7 +3,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:myapp="http://schemas.android.com/apk/res-auto">
 
-  <item android:id="@+id/action_menu"
+  <item android:id="@+id/action_sett"
 		android:icon="@drawable/Gear"
 		android:title="Настройки"
 		myapp:showAsAction="always" />

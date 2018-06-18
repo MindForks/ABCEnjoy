@@ -2071,8 +2071,8 @@ namespace ABCEnjoy
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070080
-			public const int action0 = 2131165312;
+			// aapt resource value: 0x7f07007c
+			public const int action0 = 2131165308;
 			
 			// aapt resource value: 0x7f07005a
 			public const int action_bar = 2131165274;
@@ -2098,11 +2098,11 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07005b
 			public const int action_context_bar = 2131165275;
 			
-			// aapt resource value: 0x7f070084
-			public const int action_divider = 2131165316;
+			// aapt resource value: 0x7f070080
+			public const int action_divider = 2131165312;
 			
-			// aapt resource value: 0x7f07008d
-			public const int action_menu = 2131165325;
+			// aapt resource value: 0x7f07008c
+			public const int action_filter = 2131165324;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2118,6 +2118,15 @@ namespace ABCEnjoy
 			
 			// aapt resource value: 0x7f07003c
 			public const int action_mode_close_button = 2131165244;
+			
+			// aapt resource value: 0x7f07008a
+			public const int action_search = 2131165322;
+			
+			// aapt resource value: 0x7f070089
+			public const int action_sett = 2131165321;
+			
+			// aapt resource value: 0x7f07008b
+			public const int action_sort = 2131165323;
 			
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
@@ -2137,8 +2146,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
-			// aapt resource value: 0x7f070081
-			public const int cancel_action = 2131165313;
+			// aapt resource value: 0x7f07007d
+			public const int cancel_action = 2131165309;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -2152,8 +2161,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070052
 			public const int checkbox = 2131165266;
 			
-			// aapt resource value: 0x7f070087
-			public const int chronometer = 2131165319;
+			// aapt resource value: 0x7f070083
+			public const int chronometer = 2131165315;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -2173,8 +2182,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07004f
 			public const int customPanel = 2131165263;
 			
-			// aapt resource value: 0x7f07007b
-			public const int datebefore = 2131165307;
+			// aapt resource value: 0x7f070077
+			public const int datebefore = 2131165303;
 			
 			// aapt resource value: 0x7f070058
 			public const int decor_content_parent = 2131165272;
@@ -2209,8 +2218,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07001c
 			public const int end = 2131165212;
 			
-			// aapt resource value: 0x7f07008c
-			public const int end_padder = 2131165324;
+			// aapt resource value: 0x7f070088
+			public const int end_padder = 2131165320;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
@@ -2254,17 +2263,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f070076
-			public const int imgFilter = 2131165302;
-			
-			// aapt resource value: 0x7f070077
-			public const int imgSearch = 2131165303;
-			
-			// aapt resource value: 0x7f070075
-			public const int imgSort = 2131165301;
-			
-			// aapt resource value: 0x7f07008b
-			public const int info = 2131165323;
+			// aapt resource value: 0x7f070087
+			public const int info = 2131165319;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2272,23 +2272,20 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f07007a
-			public const int left_drawer = 2131165306;
+			// aapt resource value: 0x7f070076
+			public const int left_drawer = 2131165302;
 			
-			// aapt resource value: 0x7f070079
-			public const int linbutton = 2131165305;
+			// aapt resource value: 0x7f070075
+			public const int linbutton = 2131165301;
+			
+			// aapt resource value: 0x7f070081
+			public const int line1 = 2131165313;
 			
 			// aapt resource value: 0x7f070085
-			public const int line1 = 2131165317;
-			
-			// aapt resource value: 0x7f070089
-			public const int line3 = 2131165321;
-			
-			// aapt resource value: 0x7f070078
-			public const int linearLayout = 2131165304;
+			public const int line3 = 2131165317;
 			
 			// aapt resource value: 0x7f070074
-			public const int linearLayout2 = 2131165300;
+			public const int linearLayout = 2131165300;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
@@ -2296,8 +2293,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f070083
-			public const int media_actions = 2131165315;
+			// aapt resource value: 0x7f07007f
+			public const int media_actions = 2131165311;
 			
 			// aapt resource value: 0x7f07001d
 			public const int middle = 2131165213;
@@ -2404,8 +2401,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f07007e
-			public const int sliderPrice = 2131165310;
+			// aapt resource value: 0x7f07007a
+			public const int sliderPrice = 2131165306;
 			
 			// aapt resource value: 0x7f07006c
 			public const int snackbar_action = 2131165292;
@@ -2434,8 +2431,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f070082
-			public const int status_bar_latest_event_content = 2131165314;
+			// aapt resource value: 0x7f07007e
+			public const int status_bar_latest_event_content = 2131165310;
 			
 			// aapt resource value: 0x7f070065
 			public const int submit_area = 2131165285;
@@ -2443,23 +2440,23 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f07008a
-			public const int text = 2131165322;
+			// aapt resource value: 0x7f070086
+			public const int text = 2131165318;
 			
-			// aapt resource value: 0x7f070088
-			public const int text2 = 2131165320;
+			// aapt resource value: 0x7f070084
+			public const int text2 = 2131165316;
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
 			
-			// aapt resource value: 0x7f070086
-			public const int time = 2131165318;
+			// aapt resource value: 0x7f070082
+			public const int time = 2131165314;
 			
-			// aapt resource value: 0x7f07007d
-			public const int timeafter = 2131165309;
+			// aapt resource value: 0x7f070079
+			public const int timeafter = 2131165305;
 			
-			// aapt resource value: 0x7f07007c
-			public const int timebefore = 2131165308;
+			// aapt resource value: 0x7f070078
+			public const int timebefore = 2131165304;
 			
 			// aapt resource value: 0x7f070043
 			public const int title = 2131165251;
@@ -2467,8 +2464,8 @@ namespace ABCEnjoy
 			// aapt resource value: 0x7f070048
 			public const int title_template = 2131165256;
 			
-			// aapt resource value: 0x7f07007f
-			public const int toEntert = 2131165311;
+			// aapt resource value: 0x7f07007b
+			public const int toEntert = 2131165307;
 			
 			// aapt resource value: 0x7f070072
 			public const int toolbar = 2131165298;
@@ -2712,6 +2709,9 @@ namespace ABCEnjoy
 			
 			// aapt resource value: 0x7f0d0000
 			public const int action_menu = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int action_menu_views = 2131558401;
 			
 			static Menu()
 			{
