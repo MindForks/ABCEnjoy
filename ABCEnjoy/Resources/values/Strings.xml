@@ -4,5 +4,6 @@
     <string name="app_name">ABCEnjoy</string>
     <string name="price">Цена:</string>
     <string name="date">Выберете дату: </string>
+    <string name="datetime">Выберите промежуток времени: </string>
   </resources>
 
