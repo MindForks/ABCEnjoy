@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"        
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -17,78 +17,87 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <!-- The Main Content View -->
+      <LinearLayout
+          android:orientation="vertical"
+          android:weightSum="1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+        <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          <Button
+              android:id="@+id/datebefore"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="Выберите дату" />
+        </LinearLayout>
+        <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:text="@string/datetime" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <Button
+              android:id="@+id/timebefore"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="Время(до)" />
+          <Button
+               android:id="@+id/timeafter"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Время(после)" />
+        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:weightSum="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/price" />
-                <xamarin.rangeslider.RangeSliderControl
-                    android:id="@+id/sliderPrice"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:absoluteMinValue="0"
-                    app:absoluteMaxValue="1000"
-                    app:showRangeLabels="false"
-                    app:barHeight="4dp" />
-            </LinearLayout>
-            <LinearLayout
+            android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:text="@string/price" />
+          <xamarin.rangeslider.RangeSliderControl
+              android:id="@+id/sliderPrice"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:absoluteMinValue="0"
+              app:absoluteMaxValue="1000"
+              app:showRangeLabels="false"
+              app:barHeight="4dp" />
+        </LinearLayout>
+        <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/date" />
-                <Button
-                    android:id="@+id/timebefore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="TIME BEFORE" />
-                <Button
-                    android:id="@+id/timeafter"
-                    android:paddingLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="TIME AFTER" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:id="@+id/toView"
-                    android:paddingLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="GO to View" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <WebView
-                    android:id="@+id/myimage"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
-            </LinearLayout>
+          <Button
+              android:id="@+id/toEntert"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="Перейти к развлечениям" />
+         </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    <!-- The Left Navigation Drawer -->
+        <!-- The Left Navigation Drawer -->
         <ListView
             android:id="@+id/left_drawer"
             android:layout_width="240dp"
