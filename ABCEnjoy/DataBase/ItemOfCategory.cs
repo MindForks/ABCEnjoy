@@ -15,7 +15,7 @@ namespace ABCEnjoy
 
         public string Tags { get; set; }
 
-        public string Price{ get; set; }
+        public int Price{ get; set; }
 
         public string Location { get; set; }
 

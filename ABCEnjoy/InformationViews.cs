@@ -48,6 +48,7 @@ namespace ABCEnjoy
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            GetExtraFromMain();
             CreateElements();
             SetSupportActionBar(mToolbar);
             mLeftDataSet = new List<string>();
@@ -94,7 +95,9 @@ namespace ABCEnjoy
         public void CreateElements()
         {
             ViewElement ve;
-            var res = SQLite_Android.GetDBItems("select * from Itm");
+
+            string request = String.Format("select * from Itm where price >=100 AND price <= 500");
+            var res = SQLite_Android.GetDBItems(request);
             number_of_elements = res.Count;
             ve.imgbttn = new ImageButton[number_of_elements];
 
@@ -126,7 +129,10 @@ namespace ABCEnjoy
 
 
                     ve.price = new TextView(this);
-                    ve.price.Text = res[index].Price;
+                if (res[index].Price == 0)
+                    ve.price.Text = "бесплатно";
+                else
+                    ve.price.Text = res[index].Price.ToString() + "грн.";
 
                     ve.price.Gravity = GravityFlags.Right;
                     /*cardview.AddView(cardimage);
