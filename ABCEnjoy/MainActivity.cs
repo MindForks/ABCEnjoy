@@ -95,7 +95,7 @@ namespace ABCEnjoy
                     delegate (DateTime time)
                 {
                     Time_b = time;
-                    Toast.MakeText(this, $"{Time_b.Hour}", ToastLength.Long).Show();
+                    //Toast.MakeText(this, $"{Time_b.Hour}", ToastLength.Long).Show();
                 });
 
                   frag.Show(FragmentManager, TimePickerFragment.TAG);
@@ -107,7 +107,7 @@ namespace ABCEnjoy
                   delegate (DateTime time)
                   {
                       Time_a = time;
-                      Toast.MakeText(this, $"{Time_a.Hour}", ToastLength.Long).Show();
+                      //Toast.MakeText(this, $"{Time_a.Hour}", ToastLength.Long).Show();
                   });
 
                 frag.Show(FragmentManager, TimePickerFragment.TAG);
@@ -115,16 +115,18 @@ namespace ABCEnjoy
             toEnt.Click += (e, s) =>
               {
                   var intent = new Intent(this, typeof(InformationViews));
-                  StartActivity(intent);
                 //intent.PutExtra("DateBefore", Convert.ToInt32(DateBefore));
                 //intent.PutExtra("DateAfter", Convert.ToInt32(DateAfter));
-                intent.PutExtra("minMoney", minMoney);
+                  intent.PutExtra("minMoney", minMoney);
                   intent.PutExtra("maxMoney", maxMoney);
+                  StartActivity(intent);
               };
         }
 
         private void FSlider()
         {
+            minMoney = (int)_sliderPrice.GetSelectedMinValue();
+            maxMoney = (int)_sliderPrice.GetSelectedMaxValue();
             _sliderPrice.LowerValueChanged += (s, e) =>
             {
                 minMoney = (int)_sliderPrice.GetSelectedMinValue();

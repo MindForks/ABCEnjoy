@@ -19,7 +19,7 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace ABCEnjoy
 {
-    [Activity(Label = "ABCEnjoy", MainLauncher = false, Icon = "@mipmap/icon", Theme = "@style/MyTheme")]
+    [Activity(Label = "ABCEnjoy", MainLauncher = false, Theme = "@style/MyTheme")]
     public class InformationViews : ActionBarActivity
     {
         public int number_of_elements = 0;
@@ -39,7 +39,6 @@ namespace ABCEnjoy
             public TextView price;
         }
 
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,6 +47,7 @@ namespace ABCEnjoy
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            GetExtraFromMain();
             CreateElements();
             SetSupportActionBar(mToolbar);
             mLeftDataSet = new List<string>();
@@ -59,6 +59,8 @@ namespace ABCEnjoy
 
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);
+
+            //Toast.MakeText(this, $"{minMoney} {maxMoney}", ToastLength.Long).Show();
 
             mLeftDrawer.ChoiceMode = ChoiceMode.Single;
             mLeftDrawer.ItemClick += (sender, e) =>
@@ -100,7 +102,7 @@ namespace ABCEnjoy
 
             ScrollView sw = FindViewById<ScrollView>(Resource.Id.scrollView);
             LinearLayout ll = FindViewById<LinearLayout>(Resource.Id.linearLayout);
-            Toast.MakeText(this, res.Count.ToString(), ToastLength.Long).Show();
+            Toast.MakeText(this, "Количество мероприятий: "+res.Count.ToString(), ToastLength.Long).Show();
             for (int index = 0; index < number_of_elements; index++)
             {
                     Android.Net.Uri uri = Android.Net.Uri.Parse($"{res[index].Image}");
@@ -116,9 +118,9 @@ namespace ABCEnjoy
                     ve.cardimage.LoadUrl(uri.ToString());
                     weblin.AddView(ve.cardimage);
                     
-                    //ve.cardimage
                     ve.title = new TextView(this);
                     ve.title.Text = res[index].Title;
+                    ve.title.TextSize = 20;
                     ve.local = new TextView(this);
                     ve.local.Text = res[index].Location;
 
