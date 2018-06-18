@@ -61,7 +61,7 @@ namespace ABCEnjoy
             string dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(), dbName);
             // Check if your DB has already been extracted.
             //if (!File.Exists(dbPath))
-           // {
+         //   {
                 using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
                 {
                     using (BinaryWriter bw = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
@@ -73,8 +73,8 @@ namespace ABCEnjoy
                             bw.Write(buffer, 0, len);
                         }
                     }
-                }
-           // }
+               }
+            //}
             return dbPath;
 
         }
