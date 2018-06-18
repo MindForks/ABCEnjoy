@@ -13,7 +13,7 @@ using Java.IO;
 
 namespace ABCEnjoy
 {
-    [Activity(Label = "ABCEnjoy", MainLauncher = true, Icon = "@mipmap/icon", Theme="@style/MyTheme")]
+    [Activity(Label = "ABCEnjoy", MainLauncher = true, Icon = "@drawable/appIcon", Theme="@style/MyTheme")]
     public class MainActivity : ActionBarActivity
     {
         public DateTime Date { get; set; }
