@@ -23,5 +23,7 @@ namespace ABCEnjoy
 
         public string Image { get; set; }
 
+        public string Date { get; set; }
+
     }
 }
