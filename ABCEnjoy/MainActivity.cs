@@ -85,7 +85,7 @@ namespace ABCEnjoy
                   {
                       Date = time;
                       Toast.MakeText(this, $"{Date.ToLongDateString()}", ToastLength.Long).Show();
-                      DateButton.Text = Date.Date.ToString();
+                      DateButton.Text = Date.ToShortDateString();
                   });
                   frag.Show(FragmentManager, DatePickerFragment.TAG);
               };
@@ -125,8 +125,8 @@ namespace ABCEnjoy
 
         private void FSlider()
         {
-            minMoney = (int)_sliderPrice.GetSelectedMinValue();
-            maxMoney = (int)_sliderPrice.GetSelectedMaxValue();
+            minMoney = (int)_sliderPrice.AbsoluteMinValue;
+            maxMoney = (int)_sliderPrice.AbsoluteMaxValue;
             _sliderPrice.LowerValueChanged += (s, e) =>
             {
                 minMoney = (int)_sliderPrice.GetSelectedMinValue();

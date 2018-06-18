@@ -97,7 +97,7 @@ namespace ABCEnjoy
         {
             ViewElement ve;
 
-            string request = String.Format("select * from Itm where price >=100 AND price <= 500");
+            string request = String.Format("select * from Itm where price >={0} AND price <={1}", minMoney,maxMoney);
             var res = SQLite_Android.GetDBItems(request);
             number_of_elements = res.Count;
             ve.imgbttn = new ImageButton[number_of_elements];
